@@ -64,7 +64,7 @@
     - jvm.options
     - elasticsearch.yml
     #owner: 1001
-    group: elasticsearch
+    #group: elasticsearch
 
 
 - name: Run Elasticsearch Docker
