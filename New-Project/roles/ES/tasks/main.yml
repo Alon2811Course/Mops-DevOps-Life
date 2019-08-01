@@ -63,7 +63,7 @@
     - log4j2.properties
     - jvm.options
     - elasticsearch.yml
-    owner: 1001
+    #owner: 1001
     group: elasticsearch
 
 
