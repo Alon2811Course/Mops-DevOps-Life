@@ -7,7 +7,7 @@ pipeline {
             steps {
                 deleteDir()
                 script {
-                    git credentialsId: 'devopint1', url: 'https://github.com/Alon2811Course/Mops-DevOps-Life/'
+                    git credentialsId: 'devopsint1', url: 'https://github.com/Alon2811Course/Mops-DevOps-Life/'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
                     sh "sed -i 's/roleIn/${roleIn}/g' playbook.yml"
                     sh 'cat hosts'
                     sh 'cat group_vars/all'
-                    sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars role=${roleIn} --private-key=/opt/pems/Server16.pem playbook.yml"
+                    sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars role=${roleIn} --private-key=/opt/jenkins_home/ansible/Server16.pem playbook.yml"
 
                 }
             }
