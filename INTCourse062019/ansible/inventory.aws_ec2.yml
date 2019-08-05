@@ -1,0 +1,16 @@
+plugin: aws_ec2
+regions:
+- REGION_NAME
+keyed_groups:
+- key: tags.environment
+  prefix: environment
+- key: tags.Name
+  prefix: name_
+  separator: ""
+- key: tags.service
+  prefix: service_
+  separator: ""
+#strict: False
+compose:
+  ansible_host: private_ip_address
+  #ansible_host: public_ip_address
